@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "id"           : "fabric-datagen",
+  "version"      : "${version}",
+  "license"      : "MIT",
+  "authors"      : ["deirn"],
+  "mixins"       : ["fabric-datagen.mixins.json"]
+}
