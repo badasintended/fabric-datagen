@@ -31,7 +31,7 @@ A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) th
    ```java
    public class ExampleData implements DataInitializer {
        @Override
-       public void onInitializeData(DataGenerator generator) {
+       public void onInitializeData(DataGenerator generator, GeneratorOptions options) {
            generator.install(new BlockTagsProvider(generator));
        }
    }
