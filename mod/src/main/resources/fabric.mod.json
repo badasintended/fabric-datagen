@@ -2,7 +2,12 @@
   "schemaVersion": 1,
   "id"           : "fabric-datagen",
   "version"      : "${version}",
-  "license"      : "MIT",
+  "license"      : "WTFPL",
   "authors"      : ["deirn"],
-  "mixins"       : ["fabric-datagen.mixins.json"]
+  "mixins"       : ["fabric-datagen.mixins.json"],
+  "contact"      : {
+    "homepage": "https://github.com/badasintended/fabric-datagen",
+    "sources" : "https://github.com/badasintended/fabric-datagen",
+    "issues"  : "https://github.com/badasintended/fabric-datagen/issues"
+  }
 }

@@ -39,7 +39,22 @@ public class DatagenPlugin implements Plugin<Project> {
                             data.client();
                             data.ideConfigGenerated(false);
                             data.source(extension.getSourceSet());
-                            data.programArgs("--datagen", "--dir=\"" + extension.getOutput().getAbsolutePath() + "\"");
+                            data.getProgramArgs().clear();
+
+                            String dir = "\"" + extension.getOutput().getAbsolutePath() + "\"";
+                            data.programArgs("--datagen", "--input=" + dir, "--output=" + dir);
+
+                            StringBuilder mods = new StringBuilder();
+                            for (String dataMod : extension.getMods()) {
+                                mods.append(dataMod);
+                                mods.append(';');
+                            }
+                            data.programArg("--mod=" + mods);
+                            if (extension.isServer()) data.programArg("--server");
+                            if (extension.isClient()) data.programArg("--client");
+                            if (extension.isDev()) data.programArg("--dev");
+                            if (extension.isReports()) data.programArg("--reports");
+                            if (extension.isValidate()) data.programArg("--validate");
                         })
                     )
                 )

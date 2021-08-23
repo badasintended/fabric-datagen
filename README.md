@@ -27,8 +27,7 @@ A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) th
        id 'maven-publish'
    }
    ```
-3. Re-import the project
-4. On `datagen` source set, create a class that implements `DataInitializer`, install your providers there
+3. On `datagen` source set, create a class that implements `DataInitializer`, install your providers there
    ```java
    public class ExampleData implements DataInitializer {
        @Override
@@ -37,7 +36,7 @@ A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) th
        }
    }
    ```
-5. Create a `fabric.mod.json` **in the `datagen` source set**, add your class to `bai:datagen` entrypoint
+4. Create a `fabric.mod.json` **in the `datagen` source set**, add your class to `bai:datagen` entrypoint
    ```json
    {
      "schemaVersion": 1,
@@ -46,6 +45,12 @@ A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) th
      "entrypoints"  : {
        "bai:datagen": ["com.example.data.ExampleData"]
      }
+   }
+   ```
+5. Add your data mod id to the `datagen` block on your `build.gradle`
+   ```gradle
+   datagen {
+       mods("example-data")
    }
    ```
 6. Run `runData` gradle task
