@@ -1,6 +1,7 @@
 # fabric-datagen
 
-A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) that adds support for generating data at build time.
+A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) that adds support for generating data at build time.    
+Example mod at [goodasintended/fabric-datagen-example-mod](https://github.com/goodasintended/fabric-datagen-example-mod)
 
 ## Setup
 1. Add badasintended maven repository to `settings.gradle`
