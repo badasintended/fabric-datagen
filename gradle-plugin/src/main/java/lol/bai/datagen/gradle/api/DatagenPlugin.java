@@ -3,7 +3,7 @@ package lol.bai.datagen.gradle.api;
 import java.util.Objects;
 import java.util.Scanner;
 import lol.bai.datagen.gradle.impl.DatagenExtensionImpl;
-import net.fabricmc.loom.LoomGradleExtension;
+import net.fabricmc.loom.api.LoomGradleExtensionAPI;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.jvm.tasks.Jar;
@@ -33,7 +33,7 @@ public class DatagenPlugin implements Plugin<Project> {
             project.getDependencies().add("modCompileOnly", mod);
             project.getDependencies().add("modRuntime", mod);
             project.afterEvaluate(b ->
-                project.getExtensions().configure(LoomGradleExtension.class, loom ->
+                project.getExtensions().configure(LoomGradleExtensionAPI.class, loom ->
                     loom.runs(runs ->
                         runs.create("data", data -> {
                             data.client();

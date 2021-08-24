@@ -22,8 +22,8 @@ A _hacky_ extension to [Fabric Loom](https://github.com/FabricMC/fabric-loom) th
 2. Add fabric-datagen into the plugins block on your `build.gradle`
    ```diff
    plugins {
-   ++  id 'lol.bai.fabric-datagen' version %VERSION%
        id 'fabric-loom' version '0.9-SNAPSHOT'
+   ++  id 'lol.bai.fabric-datagen' version %VERSION%
        id 'maven-publish'
    }
    ```
