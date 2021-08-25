@@ -24,7 +24,7 @@ Example mod at [goodasintended/fabric-datagen-example-mod](https://github.com/go
    ```diff
    plugins {
        id 'fabric-loom' version '0.9-SNAPSHOT'
-   ++  id 'lol.bai.fabric-datagen' version %VERSION%
+   ++  id 'lol.bai.fabric-datagen' version '0.3.+'
        id 'maven-publish'
    }
    ```
